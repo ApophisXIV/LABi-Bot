@@ -32,13 +32,13 @@ function catchMessage(query){
 
     else if ((query.channel.id != BOT.RESPUESTA.channel_id) && !(query.author.bot) && (stringMensaje.includes("!labi")) && (stringMensaje.charAt(0)==='!')){
 
-        query.delete({ timeout: 8000 });
+        query.delete({ timeout: 10000 });
 
         query.reply(BOT.RESPUESTA.wrong_channel)
             
             .then(respuestaError => {
 
-                respuestaError.delete({ timeout: 8000 });
+                respuestaError.delete({ timeout: 10000 });
             }
         );
     }
