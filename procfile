@@ -1,1 +1,1 @@
-worker: node labiBot.js
+worker: npm start
