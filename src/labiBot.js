@@ -3,7 +3,7 @@ console.log("LABi Bot Docs dice hola");
 
 require("dotenv").config();
 
-const BOT = require("./respuestas");
+const BOT = require("../../respuestas");
 
 const DISCORD_API = require("discord.js");
 const DISCORD_CLIENT = new DISCORD_API.Client();
