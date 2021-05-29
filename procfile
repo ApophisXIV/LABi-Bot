@@ -1,2 +1,2 @@
 worker: node src/labiBot.js
-heroku ps:scale web=1 worker=5
+web: node src/labiBot.js
