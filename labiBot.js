@@ -23,11 +23,37 @@ function catchMessage(query){
 
     if((query.channel.id === BOT.RESPUESTA.config.channel_id) && (stringMensaje.includes("!labi")) && (stringMensaje.charAt(0) ==='!')){
 
-        const COMMAND = stringMensaje.split(" ",2)[1].trim();
+        const COMMAND = stringMensaje.split(" ",2)[1];
 
         console.log(COMMAND);
 
-        query.reply(BOT.RESPUESTA[COMMAND]);
+        if(COMMAND != undefined){
+            
+            query.reply(BOT.RESPUESTA[COMMAND.trim()]);
+        }
+
+        else{
+
+            query.delete({ timeout: 10000 });
+
+            query.reply(BOT.RESPUESTA.unknown_command)
+
+                .then(respuestaError => {
+
+                    respuestaError.delete({ timeout: 10000 });
+                }
+            );
+
+            query.channel.send(BOT.RESPUESTA.gifs.unknown_command)                
+            
+                .then(respuestaError => {
+
+                    respuestaError.delete({ timeout: 10000 });
+                }
+            );
+
+        }
+
     }
 
     else if ((query.channel.id != BOT.RESPUESTA.channel_id) && !(query.author.bot) && (stringMensaje.includes("!labi")) && (stringMensaje.charAt(0)==='!')){
@@ -41,6 +67,14 @@ function catchMessage(query){
                 respuestaError.delete({ timeout: 10000 });
             }
         );
+
+        query.channel.send(BOT.RESPUESTA.gifs.wrong_channel)                
+            
+        .then(respuestaError => {
+
+            respuestaError.delete({ timeout: 10000 });
+        }
+    );
     }
 
     else{
