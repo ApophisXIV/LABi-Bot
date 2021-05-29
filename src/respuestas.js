@@ -5,7 +5,7 @@ const LABI_JSON = {
 
         legal: {
 
-            autorizacion_retiro_objetos: `*Su pedido está listo :mailbox_with_mail:* \n\n **LABI-PL-006 - Autorización para el Retiro de Objetos** ${process.env.AUTH_OBJ}`
+            autorizacion_retiro_objetos: `**LABI-PL-006 - Autorización para el Retiro de Objetos** ${process.env.AUTH_OBJ}`
         }
     },
 };
@@ -30,7 +30,7 @@ const RESPUESTA = {
 
     ping: "Pong 🏓",
 
-    aut_retiro_obj: LABI_JSON.administracion.legal.autorizacion_retiro_objetos,
+    aut_retiro_obj: `*Su pedido está listo :mailbox_with_mail:* \n\n ${LABI_JSON.administracion.legal.autorizacion_retiro_objetos}`,
 
 };
 
