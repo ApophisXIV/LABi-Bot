@@ -17,7 +17,7 @@ const RESPUESTA = {
         channel_id: "848076981626339348",
     },
     
-    wrong_channel: "¿Quién me despertó? :rage: No hay nadie venga más tarde. Atiendo solo en el canal designado :point_right_tone1: 𝙇𝘼𝘽𝙞-𝘽𝙤𝙩-📝\n\n https://github.com/ApophisXIV/LABi-Bot/blob/master/resources/responseGifs/labiBotWrongCommand.gif?raw=true",
+    wrong_channel: "¿Quién me despertó? :rage: No hay nadie venga más tarde. Atiendo solo en el canal designado :point_right_tone1: 𝙇𝘼𝘽𝙞-𝘽𝙤𝙩-📝\n\n https://raw.githubusercontent.com/ApophisXIV/LABi-Bot/master/resources/responseGifs/labiBotWrongChannel.gif",
 
     unknown_command: "El comando es incorrecto. Volvé a intentar",
 
