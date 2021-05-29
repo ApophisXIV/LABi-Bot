@@ -14,7 +14,7 @@ const RESPUESTA = {
 
     config:{
 
-        channel_id: "848076981626339348",
+        channel_id: process.env.CHANNEL_ID,
     },
     
     wrong_channel: "¿Quién me despertó? :rage: No hay nadie venga más tarde. Atiendo solo en el canal designado :point_right_tone1: 𝙇𝘼𝘽𝙞-𝘽𝙤𝙩-📝\n\n https://raw.githubusercontent.com/ApophisXIV/LABi-Bot/master/resources/responseGifs/labiBotWrongChannel.gif",
