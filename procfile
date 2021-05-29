@@ -1,2 +1,0 @@
-worker: node src/labiBot.js
-web: node src/labiBot.js
