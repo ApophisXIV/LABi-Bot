@@ -21,18 +21,18 @@ function catchMessage(query){
 
     const stringMensaje = query.content.toLowerCase();
 
-    if((query.channel.id === BOT.RESPUESTA.config.channel_id) && (stringMensaje.includes("!labi")) && (stringMensaje.charAt(0) ==='!')){
+    if((query.channel.id === BOT.RESPUESTA.config.channel_id) && (stringMensaje.includes("!labi")) && (stringMensaje.charAt(0) ==='!')){ //Comando en canal permitido
 
         const COMMAND = stringMensaje.split(" ",2)[1];
 
         console.log(COMMAND);
 
-        if(COMMAND != undefined){
+        if(COMMAND != undefined){ //Comando valido en canal permitido
             
             query.reply(BOT.RESPUESTA[COMMAND.trim()]);
         }
 
-        else{
+        else{ //Comando invalido en canal permitido
 
             query.delete({ timeout: 10000 });
 
@@ -56,7 +56,7 @@ function catchMessage(query){
 
     }
 
-    else if ((query.channel.id != BOT.RESPUESTA.channel_id) && !(query.author.bot) && (stringMensaje.includes("!labi")) && (stringMensaje.charAt(0)==='!')){
+    else if ((query.channel.id != BOT.RESPUESTA.channel_id) && !(query.author.bot) && (stringMensaje.includes("!labi")) && (stringMensaje.charAt(0)==='!')){ //Comnando en canal no permitido
 
         query.delete({ timeout: 10000 });
 
@@ -77,7 +77,7 @@ function catchMessage(query){
     );
     }
 
-    else{
+    else{ //Cualquier mensaje en cualquier canal que no sea un comando 
 
         console.log("Mensaje ignorado");
     }
